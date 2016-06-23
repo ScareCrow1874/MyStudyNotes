@@ -1,0 +1,43 @@
+-- Core concepts:
+Refresh rate, frames per second(fps), the eye, pinhole camera, light frustum, light as physical and virtual, grapical pipeline, Painter's algorithm & Z-buffer
+
+-- FPS, refresh rate
+6 is the mininal FPS to not feel slowing down (about 166 ms to draw a frame)
+60 provides smooth 
+most computers in US has refresh rate of 60 Hertz - this means displays image 60 times per second
+film usually has 24 FPS, but refresh rate can go up to 48 to 72 Hertz
+
+-- 3D Scene
+Objects, Lights and camera
+
+-- Teapot model & Cubic Bezier Splines
+By Martin Newell
+
+-- GPU: Graphic Processing Unit
+Application: express objects as triangles
+Camera & Model transformation: check if the object is inside the view frustum
+Rasterization: identifies all pixels whose center is inside a given triangle
+
+-- pipeline and bottleneck
+pipeline is a model of parallism
+bottleneck is the slowest stage of a pipeline
+starvation is when a later stage waiting for earlier stage to finish
+stallation is when a earlier stage is stuck because a later stage is still processing
+
+-- Painter's algorithm
+sort objects based on theri distance from distant to near, then render the most distant triangle and then render closer ones
+a flawed algorithm because it can run into cycles
+
+-- Z-buffer
+Store in each pixel not only the color but also a z-depth from 0.0 to 1.0. 0.0 is the closest to eye and 1.0 is the farthest
+Z-depths are initialized as 1.0, and pixel shows the closest object's color
+the predominant way of doing rasterization of triangles
+3 cycles if reading from closer to farther: read destination(old) z-depth, write source(new) z-depth, write source color. Only 1 cycle is needed is the new object is farther: read destination z-depth. Therefore drawing objects from the front to back is the common way to optimize GPU
+
+-- Web GL & three.js
+Web GL is an API based on OpenGL ES, a mobile version of OpenGL. Their competitors are DirectX/Direct3D
+Google Chrome turns WebGL commands into DirectX calls. 
+Web GL is a state API, setup how you want GPU to do something, then send geographics to render under these conditions, providing fine-grain control over GPU. 
+three.js provides many features that can simplify the process of using Web GL
+
+
