@@ -44,3 +44,6 @@ function drawSquare(x1, y1, x2, y2) {
 
 -- See full file on drawing a square in the folder
 
+-- Meshes
+A polygon mesh is a collection of vertices, edges and faces that defines the shape of a polyhedral object in 3D computer graphics and solid modeling.
+
