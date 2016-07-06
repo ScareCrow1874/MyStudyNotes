@@ -1,0 +1,46 @@
+-- Points and vectors and triangles
+points are 3 coordinate entity, vector (line segment) consists of two points
+triangle consists of 3 points. It's the major material for generating geometry
+
+-- Triangulation and Tessellation
+Tessellation: breaking object into polygons
+Triangulation: breaking shapes into triangles
+Polygons with n edges can needs n-2 triangles to represent it
+
+-- Vertex ordering and culling
+Backface culling: not render the faces that's hidden
+Front-face triangle: counterclockwise vertex ordering, right hand rule
+Back-face triangle: clockwise vertex ordering, left hand rule
+
+-- Creating triangle with three.js
+function exampleTriangle() {
+	// This code demonstrates how to draw a triangle
+	var triangle = new THREE.Geometry();
+	triangle.vertices.push( new THREE.Vector3( 1, 1, 0 ) );
+	triangle.vertices.push( new THREE.Vector3( 3, 1, 0 ) );
+	triangle.vertices.push( new THREE.Vector3( 3, 3, 0 ) );
+	
+	triangle.faces.push( new THREE.Face3( 0, 1, 2 ) );
+
+	return triangle;
+}
+
+-- Creating square with three.js
+function drawSquare(x1, y1, x2, y2) {
+
+	var square = new THREE.Geometry();
+	// Your code goes here
+    square.vertices.push( new THREE.Vector3(x1, y1, 0) );
+    square.vertices.push( new THREE.Vector3(x2, y2, 0) );
+    square.vertices.push( new THREE.Vector3(x1, y2, 0) );
+    square.vertices.push( new THREE.Vector3(x2, y1, 0) );
+    
+    square.faces.push( new THREE.Face3( 0, 1, 2 ));
+    square.faces.push( new THREE.Face3( 0, 1, 3 ));
+    
+	// don't forget to return the geometry!	The following line is required!
+	return square;
+}
+
+-- See full file on drawing a square in the folder
+
