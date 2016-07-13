@@ -1,0 +1,9 @@
+-- Setting environment with Unity editor
+
+
+-- MonoDevelop-Unity: C# IDE for unity
+(Cmd + ') brings up the man page online
+
+-- Prefab
+An asset that serves as a template for multiple gameObjects, changes on which will be reflected on all its instances.
+Prefab instances are shown in blue text in hierarchy view
