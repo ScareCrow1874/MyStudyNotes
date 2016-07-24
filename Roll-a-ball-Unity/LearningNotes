@@ -1,9 +1,53 @@
--- Setting environment with Unity editor
 
+############# ENVIRONMENTS #############
+-- Setting environment with Unity editor
+Can make folder names start with underscore to make sure they stay at top
 
 -- MonoDevelop-Unity: C# IDE for unity
 (Cmd + ') brings up the man page online
 
+############# FUNCTIONALITIES #############
+-- Focus on a game object
+Select the object in the Hierarchy window, move the mouse over (don't click) the scene view, then press "F" key to focus on that object
+
+-- Scaling objects
+Select scale tool, 4th on the left, and drag the coordination/scale number panel or type number into scale number panel to scale objects
+
+-- Creating a floor
+Create ground by creating "plane" game object, deselect "Show Grid" in Gizmo drop menu to hide grid lines of the grey plane
+
+############# OBJECT PROPERTIES #############
+-- Unity Coordination
+Red: x
+Green: y
+Blue: z
+
+-- Plane
+Plane is single-sided and has no volume and will not change on Y-axis. Changing Y-axis negative will change the plane to face down.
+
 -- Prefab
 An asset that serves as a template for multiple gameObjects, changes on which will be reflected on all its instances.
 Prefab instances are shown in blue text in hierarchy view
+
+-- Material
+Used for adding texture and color to an object. Create a specific folder to hold your materials.
+Use the Albedo's color picker to add color
+
+-- Rigid Body Component
+Necessary for using physics
+
+############# SCRIPTING FOR UNITY ############# 
+-- void Update()
+Called before rendering a frame. Most of the game code goes here
+
+-- void FixedUpdate()
+Called just before physics operations. Physics code goes here.
+
+############# TIPS, TRICKS AND PREFERENCES #############
+-- Better default light for sphere
+Position: 0,3,0
+Rotation: 50,60,0
+Scale: 1,1,1
+
+-- Inspector ordering
+From top to bottom: Transform, Sphere(Mesh Filter), Mesh Renderer, Rigidbody, Sphere Collider, Scripts, default material
