@@ -3,9 +3,14 @@ General approach:
   2. label each object
   3. grab the object
   
-Useful functions: 
+Useful functions (graph specific): 
   1. [L,num] = bwlabel(___): label connected components in 2-D binary image, also returns the number of connected objects (fill in the line there with BW or (BW, n))
+  IN MORE DETAILS: http://blog.csdn.net/nevermoredanny/article/details/7710946
   2. imfill(BW, holes): Fill image regions and holes. A hole is a set of background pixels that cannot be reached by filling in the background from the edge of the image. (In the middle of the image)
+  3. im2bw: change image to binary (black and white) image
   
-  
+General function notes:
+  1. bsxfun: applies an element-by-element binary operation to arrays a and b, with singleton expansion enabled.
+  IN MORE DETAILS: http://blog.sina.com.cn/s/blog_9e67285801010ttn.html
+  2. 
   
