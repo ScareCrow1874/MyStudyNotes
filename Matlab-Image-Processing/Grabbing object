@@ -1,0 +1,11 @@
+General approach:
+  1. turn color image into black and white
+  2. label each object
+  3. grab the object
+  
+Useful functions: 
+  1. [L,num] = bwlabel(___): label connected components in 2-D binary image, also returns the number of connected objects (fill in the line there with BW or (BW, n))
+  2. imfill(BW, holes): Fill image regions and holes. A hole is a set of background pixels that cannot be reached by filling in the background from the edge of the image. (In the middle of the image)
+  
+  
+  
