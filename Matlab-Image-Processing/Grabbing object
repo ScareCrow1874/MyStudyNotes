@@ -8,6 +8,7 @@ Useful functions (graph specific):
   IN MORE DETAILS: http://blog.csdn.net/nevermoredanny/article/details/7710946
   2. imfill(BW, holes): Fill image regions and holes. A hole is a set of background pixels that cannot be reached by filling in the background from the edge of the image. (In the middle of the image)
   3. im2bw: change image to binary (black and white) image
+  4. bwconncomp
   
 General function notes:
   1. bsxfun: applies an element-by-element binary operation to arrays a and b, with singleton expansion enabled.
