@@ -1,0 +1,10 @@
+Numpy: scientific computing package with arrays and matrices
+
+-- Install
+pip install numpy
+
+if pip is not properly upgraded, first upgrade: pip install --user --upgrade pip
+
+-- Functions
+np.arange(low, high, interval): produce a series of numbers within the high-low bound, increasing by interval
+np.empty(size): creates an array of given size filled with random numbers (faster than zeros or ones)
