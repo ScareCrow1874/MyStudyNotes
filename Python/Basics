@@ -1,0 +1,6 @@
+- math
+power: math.pow(base, power)
+
+- random
+random is an included module
+to generate random number: n = random.random()
