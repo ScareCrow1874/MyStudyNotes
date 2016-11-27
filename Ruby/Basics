@@ -1,0 +1,40 @@
+-- creating a new class
+class XXX
+  attr_reader :attr1 :attr2 #attributes that can be retrieved from outside
+  attr_writer :attr1 :attr3 #attributes that can be modified from outside
+  
+  def initialize(arg0, arg1, arg2...)
+    @attr1 = arg0
+    @attr2 = arg1
+    @attr3 = arg2
+  end
+end
+
+-- creating a function
+def functionName(params)
+  functionBody
+end
+
+-- type checking
+checks type: ob.is_a? type
+output type: ob.class
+
+-- String manipulation
+s.to_i: convert string to integer
+difference between to_i and to_int: http://www.rubyfleebie.com/to_i-vs-to_int/
+
+s.split("separator", number of tokens): split string into tokens given the separator. if given number, then only generate that many tokens. All tokens are put inside array.
+
+test equality of string: == or s1.eql? s2
+
+string interpolation: "xxxx, #{var}"
+
+-- Array
+contains element: arr.include? e
+
+-- IO
+gets input: s = gets.chomp # gets reads in the input, chomp gets read of the newline character
+
+-- numbers
+convert to float: ob.to_f
+    
